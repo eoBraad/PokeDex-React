@@ -1,6 +1,6 @@
 ## Pokedex usando React e PokeApi
 
-<img src='./src/assets/img-do-projeto.png' alt='Imagem do Projeto' />
+![img-do-projeto](https://user-images.githubusercontent.com/89014167/138571618-3d1604e7-530c-4bb7-a01b-5c55544d0092.png)
 
 -Pokedex consumindo a PokeApi
 
@@ -15,3 +15,4 @@
 - Em seguida, de um yarn add ou npm install para baixar as dependencias.
 
 - Depois basta dar um npm start ou yarn start que você conseguirar usufruir do mesmo
+
