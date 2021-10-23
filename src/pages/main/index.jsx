@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigation } from '../../components/Header';
 import axios from 'axios';
 import { Container, PokemonContainer } from './style';
 import { getElement } from '../../services/getElement';
+
 
 export function Home() {
   const [inputValue, setInputValue] = useState('');
   const [pokemon, setPokemon] = useState([]);
   const [check, setCheck] = useState(false);
   const [loading, setLoading] = useState(false);
+
 
   async function getPokemon() {
     const toArray = [];
@@ -23,6 +25,10 @@ export function Home() {
     }
     setLoading(false);
   }
+
+  useEffect(() => {
+    document.title = 'Pokedex | By João Alencar';
+  })
 
   function handleSearchPoke(evt) {
     evt.preventDefault();

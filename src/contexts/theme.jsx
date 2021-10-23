@@ -15,6 +15,8 @@ export function ThemeContextProvider (props) {
       hoverBG:'#80282f'
     }
   })
+
+  
   
   
 
@@ -55,12 +57,11 @@ export function ThemeContextProvider (props) {
 
   useEffect(() => {
   setThemeContext(themeContext)
-  console.log(themeContext.theme.backGroundColor)
+  
 }, [themeContext])
 
   function handleSetThemeContext(evt) {
     setThemeGlobal(evt.target.innerHTML)
-    
   }
   return (
     // eslint-disable-next-line no-sequences
