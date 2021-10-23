@@ -8,10 +8,12 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  background-color: ${(props) => props.theme.backGroundColor};
+
    h1 {
      margin-top: 15px;
    }
-   form {
+   form { 
       margin-top: 20px;
 
       input {
@@ -30,7 +32,7 @@ export const Container = styled.div`
         height: 35px;
         border: none;
         cursor: pointer;
-        background-color: #2cb7ea;
+        background-color: ${(props) => props.theme.searchColor};
         font-size: 14px;
         color: #ffffff;
         font-family: 'Poppins';

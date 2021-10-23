@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const NavButton = styled.button`
   width: 50px;
   height: 50px;
-  background-color: ${({activeButton}) => activeButton ? "#d32a35" : "#e94c58"};
+  background-color: ${({activeButton}) => activeButton ? (props) => props.theme.backGroundColorBlack : (props) => props.theme.backGroundColor};
   position: absolute;
   top: 10px;
   left: ${({activeButton}) => activeButton ? '220px' : '20px'};
@@ -17,7 +17,7 @@ export const NavButton = styled.button`
   z-index: 100;
 
     &:hover {
-      background-color: ${({activeButton}) => activeButton ? "#e94c58" : "#d32a35"};
+      background-color: ${({activeButton}) => activeButton ?(props) => props.theme.backGroundColor : (props) => props.theme.backGroundColorBlack};
     }
 
     div {
@@ -59,7 +59,7 @@ export const NavContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d32a35;
+  background-color: ${(props) => props.theme.backGroundColorBlack};
   transition: .5s;
   z-index: 100;
   li {
@@ -78,12 +78,12 @@ export const NavContainer = styled.div`
   }
 
   li:hover {
-    background-color: #80282f;
+    background-color: ${(props) => props.theme.hoverBG};
   }
 `
 
 export const ThemeActive = styled.li`
-    background-color:  ${props => props.themeActive ? '#601a1e' : '#d32a35'};
+    background-color:  ${props => props.themeActive ? (props) => props.theme.backGroundColor : (props) => props.theme.backGroundColorBlack};
     width: 100%;
     border: none;
     height: 100%;
@@ -93,8 +93,8 @@ export const ThemeContainer = styled.ul`
   display: block;
   height: ${props => props.setTheme ? '110px' : '0'};
   transition: .3s;
-  background-color: #80282f;
+  background-color: ${(props) => props.theme.backGroundColorBlack};
     li:hover{
-      background-color: #601a1e;
+      background-color:  ${(props) => props.theme.hoverBG};
     }
 `

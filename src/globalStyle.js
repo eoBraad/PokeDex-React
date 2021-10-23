@@ -23,7 +23,6 @@ export const GlobalStyle = createGlobalStyle`
   
     body {
       color: #ffffff;
-      background-color: #e94c58;
       width: 100%;
       height: 100vh;
       font-family: 'Poppins';
